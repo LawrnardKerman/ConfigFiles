@@ -9,8 +9,8 @@ Item {
     implicitWidth: 20
     
     property real value: 50
-    property color fillColor: "#fe8019"
-    property color trackColor: "#3c3836"
+    property color fillColor: Theme.orange
+    property color trackColor: Theme.bgHover
     readonly property alias pressed: dragArea.pressed
 
     signal moved(real newValue)
@@ -23,7 +23,7 @@ Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         color: trackColor
-        border.color: "#504945"
+        border.color: Theme.borderLight
         border.width: 1
 
         // Filled portion (bottom up)
@@ -43,7 +43,7 @@ Item {
         // top=100%, bottom=0%
         y: (1 - root.value / 100) * (root.height - height)
         color: dragArea.pressed ? Qt.darker(root.fillColor, 1.3) : root.fillColor
-        border.color: "#282828"
+        border.color: Theme.bg
         border.width: 1
     }
 

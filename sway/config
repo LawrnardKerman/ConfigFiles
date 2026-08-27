@@ -1,4 +1,6 @@
-exec mako
+# notifications handled by quickshell NotificationServer — do not start mako
+# exec mako
+exec systemctl --user import-environment SWAYSOCK I3SOCK WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_RUNTIME_DIR DBUS_SESSION_BUS_ADDRESS
 set $mod Mod4
 set $left h
 set $down j
@@ -9,12 +11,18 @@ set $menu rofi
 set $gaps 5
 
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+p exec makoctl dismiss -a
+# (old: makoctl dismiss-all; notifications now dismissed via the quickshell popup)
+# bindsym $mod+p exec ...  # clear-all now lives in the notifications popup
+bindsym $mod+m exec ~/.config/sway/scripts/toggle-procon2-mouse.sh && notify-send -a "Utils" -t 5000 -u low "Pro Controller mouse funtion toggled"
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
+## Launchers
 bindsym $mod+d exec $menu -show drun -drun-use-desktop-cache
 bindsym $mod+Shift+d exec rofi -show run
 bindsym $mod+Alt+d exec rofi -show window
+bindsym $mod+Shift+e exec rofimoji --files all
+
+
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+$left focus left

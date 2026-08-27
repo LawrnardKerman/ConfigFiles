@@ -12,6 +12,7 @@ Item {
     property int anchorY: 0
     property int screenWidth: 1920   // set from shell.qml: calWidget.screenWidth = bar.screen.width
     property real anchorX: 0
+    readonly property int popupHeight: 320   // consumed by DashboardPopup positioning
 
     property var today: new Date()
     property int viewYear:  today.getFullYear()
@@ -107,7 +108,7 @@ Item {
         id: popWin
         visible: calPopup.open
         implicitWidth:  520
-        implicitHeight: 320
+        implicitHeight: calPopup.popupHeight
         anchor.window: calPopup.anchorWindow
         anchor.rect.y: calPopup.anchorY
         anchor.rect.x: calPopup.anchorX

@@ -1,5 +1,5 @@
 alias clear 'clear && zfetch'
-alias ls 'exa --icons'
+alias ls 'exa --icons always'
 alias cat 'bat --theme gruvbox-dark'
 alias roblox sober
 alias why witr

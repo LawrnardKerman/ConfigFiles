@@ -9,20 +9,20 @@ Row {
         model: I3.workspaces
         Rectangle {
             width: 22; height: 18
-            color: modelData.focused ? "#3c3836"
-                 : modelData.urgent  ? "#fbf1c7"
-                 : wsHover.hovered   ? "#3c3836"
-                 : "#282828"
+            color: modelData.focused ? Theme.bgHover
+                 : modelData.urgent  ? Theme.urgent
+                 : wsHover.hovered   ? Theme.bgHover
+                 : Theme.bg
 
             HoverHandler { id: wsHover }
 
             Text {
                 anchors.centerIn: parent
                 text: modelData.name
-                color: modelData.focused ? "#ebdbb2" : (modelData.urgent ? "#3c3836" : "#ebdbb2")
+                color: modelData.focused ? Theme.fg : (modelData.urgent ? Theme.bgHover : Theme.fg)
                 font.bold: modelData.focused
-                font.family: "iosevka, monospace"
-                font.pixelSize: 11
+                font.family: Theme.fontFamily
+                font.pixelSize: Theme.fontSize
             }
 
             MouseArea {

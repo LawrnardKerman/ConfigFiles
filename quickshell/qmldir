@@ -1,0 +1,20 @@
+singleton Theme 1.0 Theme.qml
+AudioControls 1.0 AudioControls.qml
+BarStats 1.0 BarStats.qml
+CalendarPopup 1.0 CalendarPopup.qml
+LineGraph 1.0 LineGraph.qml
+LockScreen 1.0 LockScreen.qml
+MiniPlayer 1.0 MiniPlayer.qml
+NetworkPopup 1.0 NetworkPopup.qml
+NetworkStatus 1.0 NetworkStatus.qml
+NetworkToggle 1.0 NetworkToggle.qml
+NotificationsPopup 1.0 NotificationsPopup.qml
+NotificationsStatus 1.0 NotificationsStatus.qml
+PlayerPopup 1.0 PlayerPopup.qml
+SystemStats 1.0 SystemStats.qml
+VoicePopup 1.0 VoicePopup.qml
+VoiceState 1.0 VoiceState.qml
+VolumeSlider 1.0 VolumeSlider.qml
+WeatherPopup 1.0 WeatherPopup.qml
+WeatherStatus 1.0 WeatherStatus.qml
+Workspaces 1.0 Workspaces.qml
