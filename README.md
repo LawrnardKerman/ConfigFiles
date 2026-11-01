@@ -25,6 +25,7 @@ then
 ```bash
 sudo reboot
 ```
+
 > [!NOTE]
 > You need yay for this, or any AUR helper but i like yay the best. You can install yay with the below
 > ```bash
@@ -34,6 +35,7 @@ sudo reboot
 > ```
 
 ## Keybinds
+
 | Shortcut | Action |
 |---|---|
 | Mod + Return | Open terminal |
