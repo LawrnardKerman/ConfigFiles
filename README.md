@@ -25,6 +25,7 @@ then
 ```bash
 sudo reboot
 ```
+ ㅤㅤ
 
 > [!NOTE]
 > You need yay for this, or any AUR helper but i like yay the best. You can install yay with the below
