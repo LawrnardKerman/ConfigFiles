@@ -170,7 +170,7 @@ ShellRoot {
                 //        anchors.centerIn: parent
                 //        text: "\uf013"
                 //        color: (qsStatus.dndEnabled || !qsStatus.wifiEnabled) ? "#fe8019" : "#ebdbb2"
-                //        font.family: "Font Awesome 5 Free"
+                //        font.family: "Font Awesome 6 Free"
                 //        font.pixelSize: 12
                 //    }
 
@@ -343,7 +343,7 @@ font.pixelSize: 10
                     Layout.alignment: Qt.AlignHCenter
                     text: "\uf028"
                     color: Theme.orange
-                    font.family: "Font Awesome 5 Free"
+                    font.family: "Font Awesome 6 Free"
                     font.pixelSize: 12
                 }
             }
@@ -415,7 +415,7 @@ font.pixelSize: 10
                     Layout.alignment: Qt.AlignHCenter
                     text: "\uf130"
                     color: Theme.purple
-                    font.family: "Font Awesome 5 Free"
+                    font.family: "Font Awesome 6 Free"
                     font.pixelSize: 12
                 }
             }

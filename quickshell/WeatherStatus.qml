@@ -19,7 +19,7 @@ Item {
     property var hourly: []   // [{ hourLabel, temp, code }] — next 8 hours
 
     // Icons use JetBrains Mono Nerd Font's embedded weather set (e3xx) —
-    // there is no real "Font Awesome 5 Free" on this system and several FA
+    // there is no real "Font Awesome 6 Free" on this system and several FA
     // codepoints (cloud-sun/fog/rain/showers) don't exist in its fallback,
     // which rendered as missing glyphs.
     function weatherIcon(code) {

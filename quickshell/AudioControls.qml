@@ -25,7 +25,7 @@ RowLayout {
             Text {
                 text: root.sysStats.volume < 1 ? "\uf026" : (root.sysStats.volume < 50 ? "\uf027" : "\uf028")
                 color: "#fe8019"
-                font.family: "Font Awesome 5 Free"
+                font.family: "Font Awesome 6 Free"
                 font.pixelSize: 11
             }
             Text {
@@ -59,7 +59,7 @@ RowLayout {
             Text {
                 text: "\uf130"
                 color: "#d3869b"
-                font.family: "Font Awesome 5 Free"
+                font.family: "Font Awesome 6 Free"
                 font.pixelSize: 11
             }
             Text {

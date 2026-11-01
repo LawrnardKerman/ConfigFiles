@@ -56,7 +56,7 @@ Item {
                     Text {
                         text:           "\uf130"
                         color:          "#8ec07c"
-                        font.family:    "Font Awesome 5 Free"
+                        font.family:    "Font Awesome 6 Free"
                         font.pixelSize: 11
                     }
 
@@ -139,7 +139,7 @@ Item {
                                     visible:        userRow.user.mute && !userRow.user.deaf
                                     text:           "\uf131"
                                     color:          "#fb4934"
-                                    font.family:    "Font Awesome 5 Free"
+                                    font.family:    "Font Awesome 6 Free"
                                     font.pixelSize: 9
                                 }
 
@@ -147,7 +147,7 @@ Item {
                                     visible:        userRow.user.deaf
                                     text:           "\uf2a2"
                                     color:          "#d3869b"
-                                    font.family:    "Font Awesome 5 Free"
+                                    font.family:    "Font Awesome 6 Free"
                                     font.pixelSize: 9
                                 }
                             }

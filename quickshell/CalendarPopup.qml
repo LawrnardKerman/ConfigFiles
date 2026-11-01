@@ -307,7 +307,7 @@ Item {
                         Layout.fillWidth: true
                         Text {
                             text: "\uf053"; color: "#a89984"
-                            font.family: "Font Awesome 5 Free"; font.pixelSize: 10
+                            font.family: "Font Awesome 6 Free"; font.pixelSize: 10
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {
@@ -325,7 +325,7 @@ Item {
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "\uf054"; color: "#a89984"
-                            font.family: "Font Awesome 5 Free"; font.pixelSize: 10
+                            font.family: "Font Awesome 6 Free"; font.pixelSize: 10
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {

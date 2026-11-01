@@ -18,7 +18,7 @@ RowLayout {
     Text {
         text: "\uf048"
         color: "#83a598"
-        font.family: "Font Awesome 5 Free"
+        font.family: "Font Awesome 6 Free"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent
@@ -32,7 +32,7 @@ RowLayout {
     Text {
         text: (root.player && root.player.playbackState === MprisPlaybackState.Playing) ? "\uf04c" : "\uf04b"
         color: "#83a598"
-        font.family: "Font Awesome 5 Free"
+        font.family: "Font Awesome 6 Free"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent
@@ -46,7 +46,7 @@ RowLayout {
     Text {
         text: "\uf051"
         color: "#83a598"
-        font.family: "Font Awesome 5 Free"
+        font.family: "Font Awesome 6 Free"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent

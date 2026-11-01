@@ -104,7 +104,7 @@ Item {
                         visible:          albumArt.status !== Image.Ready
                         text:             "\uf001"
                         color:            "#504945"
-                        font.family:      "Font Awesome 5 Free"
+                        font.family:      "Font Awesome 6 Free"
                         font.pixelSize:   34
                     }
                 }
@@ -155,7 +155,7 @@ Item {
                         Text {
                             text:           "\uf074"
                             color:          (playerPopup.player && playerPopup.player.shuffle) ? "#b8bb26" : "#665c54"
-                            font.family:    "Font Awesome 5 Free"
+                            font.family:    "Font Awesome 6 Free"
                             font.pixelSize: 11
                             MouseArea {
                                 anchors.fill:    parent
@@ -171,7 +171,7 @@ Item {
                         Text {
                             text:           "\uf048"
                             color:          "#83a598"
-                            font.family:    "Font Awesome 5 Free"
+                            font.family:    "Font Awesome 6 Free"
                             font.pixelSize: 14
                             MouseArea {
                                 anchors.fill:    parent
@@ -188,7 +188,7 @@ Item {
                             text:           (playerPopup.player && playerPopup.player.playbackState === MprisPlaybackState.Playing)
                                             ? "\uf04c" : "\uf04b"
                             color:          "#ebdbb2"
-                            font.family:    "Font Awesome 5 Free"
+                            font.family:    "Font Awesome 6 Free"
                             font.pixelSize: 18
                             MouseArea {
                                 anchors.fill:    parent
@@ -204,7 +204,7 @@ Item {
                         Text {
                             text:           "\uf051"
                             color:          "#83a598"
-                            font.family:    "Font Awesome 5 Free"
+                            font.family:    "Font Awesome 6 Free"
                             font.pixelSize: 14
                             MouseArea {
                                 anchors.fill:    parent

@@ -10,7 +10,7 @@ RowLayout {
     // Memory
     RowLayout {
         spacing: 4
-        Text { text: "\uf233"; color: Theme.green; font.family: "Font Awesome 5 Free"; font.pixelSize: 11 }
+        Text { text: "\uf233"; color: Theme.green; font.family: "Font Awesome 6 Free"; font.pixelSize: 11 }
         Rectangle {
             width: 35; height: 12
             color: Theme.bgHover; border.color: Theme.borderLight; border.width: 1; clip: true
@@ -26,7 +26,7 @@ RowLayout {
     // CPU
     RowLayout {
         spacing: 4
-        Text { text: "\uf2db"; color: Theme.fg; font.family: "Font Awesome 5 Free"; font.pixelSize: 11 }
+        Text { text: "\uf2db"; color: Theme.fg; font.family: "Font Awesome 6 Free"; font.pixelSize: 11 }
         Rectangle {
             width: 35; height: 12
             color: Theme.bgHover; border.color: Theme.borderLight; border.width: 1; clip: true

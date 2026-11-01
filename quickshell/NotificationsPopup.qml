@@ -115,7 +115,7 @@ Item {
                             Text {
                                 text: "\uf00d"
                                 color: disMa.containsMouse ? "#fb4934" : "#665c54"
-                                font.family: "Font Awesome 5 Free"
+                                font.family: "Font Awesome 6 Free"
                                 font.pixelSize: 9
                                 MouseArea {
                                     id: disMa
