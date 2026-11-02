@@ -6,6 +6,8 @@ text-color=#ebdbb2
 border-color=#504945
 progress-color=#8ec07c
 
+default-timeout=2500
+
 [urgency=low]
 border-color=#665c54
 

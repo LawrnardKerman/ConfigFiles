@@ -5,26 +5,16 @@ Item {
     id: root
     property real cpuUsage: 0
     property real memoryUsage: 0
-    property real memoryUsedGb: 0
-    property real memoryTotalGb: 0
     property real volume: 0
     property real micVolume: 0
     
     Process {
         id: memProc
-        // outputs: usage ratio, used GiB, total GiB
-        command: ["bash", "-c", "free | awk '/Mem/ {printf \"%f %f %f\", $3/$2, $3/1048576, $2/1048576}'"]
+        command: ["bash", "-c", "free | awk '/Mem/ {print $3/$2}'"]
         stdout: StdioCollector {
             onStreamFinished: {
-                var parts = text.trim().split(/\s+/)
-                if (parts.length >= 3) {
-                    var mem = parseFloat(parts[0]);
-                    if (!isNaN(mem)) root.memoryUsage = mem;
-                    var used = parseFloat(parts[1]);
-                    if (!isNaN(used)) root.memoryUsedGb = used;
-                    var total = parseFloat(parts[2]);
-                    if (!isNaN(total)) root.memoryTotalGb = total;
-                }
+                var mem = parseFloat(text);
+                if (!isNaN(mem)) root.memoryUsage = mem;
             }
         }
     }

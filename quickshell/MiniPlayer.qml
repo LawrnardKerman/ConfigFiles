@@ -16,9 +16,9 @@ RowLayout {
 
     // Back
     Text {
-        text: "\uf048"
+        text: "|<"
         color: "#83a598"
-        font.family: "Font Awesome 6 Free"
+        font.family: "iosevka monospace"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent
@@ -30,9 +30,9 @@ RowLayout {
 
     // Play/Pause
     Text {
-        text: (root.player && root.player.playbackState === MprisPlaybackState.Playing) ? "\uf04c" : "\uf04b"
+        text: (root.player && root.player.playbackState === MprisPlaybackState.Playing) ? "||" : ">"
         color: "#83a598"
-        font.family: "Font Awesome 6 Free"
+        font.family: "iosevka monospace"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent
@@ -44,16 +44,16 @@ RowLayout {
 
     // Skip
     Text {
-        text: "\uf051"
+        text: ">|"
         color: "#83a598"
-        font.family: "Font Awesome 6 Free"
+        font.family: "iosevka monospace"
         font.pixelSize: 11
         MouseArea {
             anchors.fill: parent
             anchors.margins: -2
             cursorShape: Qt.PointingHandCursor
             onClicked: if (root.player) root.player.next()
-        }
+          }
     }
 
     // Song name

@@ -12,7 +12,6 @@ Item {
     property int anchorY: 0
     property int screenWidth: 1920   // set from shell.qml: calWidget.screenWidth = bar.screen.width
     property real anchorX: 0
-    readonly property int popupHeight: 320   // consumed by DashboardPopup positioning
 
     property var today: new Date()
     property int viewYear:  today.getFullYear()
@@ -108,7 +107,7 @@ Item {
         id: popWin
         visible: calPopup.open
         implicitWidth:  520
-        implicitHeight: calPopup.popupHeight
+        implicitHeight: 320
         anchor.window: calPopup.anchorWindow
         anchor.rect.y: calPopup.anchorY
         anchor.rect.x: calPopup.anchorX
@@ -307,7 +306,7 @@ Item {
                         Layout.fillWidth: true
                         Text {
                             text: "\uf053"; color: "#a89984"
-                            font.family: "Font Awesome 6 Free"; font.pixelSize: 10
+                            font.family: "Font Awesome 5 Free"; font.pixelSize: 10
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {
@@ -325,7 +324,7 @@ Item {
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "\uf054"; color: "#a89984"
-                            font.family: "Font Awesome 6 Free"; font.pixelSize: 10
+                            font.family: "Font Awesome 5 Free"; font.pixelSize: 10
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {

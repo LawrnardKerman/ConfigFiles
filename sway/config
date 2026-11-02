@@ -1,6 +1,4 @@
-# notifications handled by quickshell NotificationServer — do not start mako
-# exec mako
-exec systemctl --user import-environment SWAYSOCK I3SOCK WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_RUNTIME_DIR DBUS_SESSION_BUS_ADDRESS
+exec mako
 set $mod Mod4
 set $left h
 set $down j
@@ -9,20 +7,14 @@ set $right l
 set $term kitty
 set $menu rofi
 set $gaps 5
-
+ 
 bindsym $mod+Shift+space floating toggle
-# (old: makoctl dismiss-all; notifications now dismissed via the quickshell popup)
-# bindsym $mod+p exec ...  # clear-all now lives in the notifications popup
-bindsym $mod+m exec ~/.config/sway/scripts/toggle-procon2-mouse.sh && notify-send -a "Utils" -t 5000 -u low "Pro Controller mouse funtion toggled"
+bindsym $mod+p exec makoctl dismiss -a
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
-## Launchers
-bindsym $mod+d exec $menu -show drun -drun-use-desktop-cache
+bindsym $mod+d exec $menu -show drun
 bindsym $mod+Shift+d exec rofi -show run
 bindsym $mod+Alt+d exec rofi -show window
-bindsym $mod+Shift+e exec rofimoji --files all
-
-
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+$left focus left
@@ -66,7 +58,7 @@ bindsym Alt+Shift+s exec grim -g "$(slurp)" /tmp/swappy.png && swappy -f /tmp/sw
 
 include ~/.config/sway/appearance
 output * bg ~/bg.* fill
-gaps inner 4
+#gaps inner 0
 gaps outer 2
 
 ## QOL
@@ -77,10 +69,10 @@ for_window [app_id="scratchpad_note"] move scratchpad
 bindsym $mod+minus scratchpad show
 
 ## Media Control
-##bindsym --no-repeat XF86AudioPlay exec ~/.config/sway/scripts/mediaDoubleTap.sh play ## Double tap on heaphones
-##bindsym XF86AudioNext exec playerctl next
-##bindsym XF86AudioPrev exec playerctl previous
+bindsym --no-repeat XF86AudioPlay exec ~/.config/sway/scripts/mediaDoubleTap.sh play ## Double tap on heaphones
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-##bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
-##bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-##bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle

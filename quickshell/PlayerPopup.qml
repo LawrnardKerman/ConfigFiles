@@ -102,10 +102,10 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         visible:          albumArt.status !== Image.Ready
-                        text:             "\uf001"
+                        text:             "loading..."
                         color:            "#504945"
-                        font.family:      "Font Awesome 6 Free"
-                        font.pixelSize:   34
+                        font.family:      "iosevka monospace"
+                        font.pixelSize:   10
                     }
                 }
 
@@ -153,9 +153,9 @@ Item {
 
                         // Shuffle
                         Text {
-                            text:           "\uf074"
+                            text:           "&"
                             color:          (playerPopup.player && playerPopup.player.shuffle) ? "#b8bb26" : "#665c54"
-                            font.family:    "Font Awesome 6 Free"
+                            font.family:    "iosevka monospace"
                             font.pixelSize: 11
                             MouseArea {
                                 anchors.fill:    parent
@@ -169,9 +169,9 @@ Item {
 
                         // Previous
                         Text {
-                            text:           "\uf048"
+                            text:           "|<"
                             color:          "#83a598"
-                            font.family:    "Font Awesome 6 Free"
+                            font.family:    "iosevka monospace"
                             font.pixelSize: 14
                             MouseArea {
                                 anchors.fill:    parent
@@ -186,9 +186,9 @@ Item {
                         // Play/Pause
                         Text {
                             text:           (playerPopup.player && playerPopup.player.playbackState === MprisPlaybackState.Playing)
-                                            ? "\uf04c" : "\uf04b"
+                                            ? "||" : ">"
                             color:          "#ebdbb2"
-                            font.family:    "Font Awesome 6 Free"
+                            font.family:    "iosevka monospace"
                             font.pixelSize: 18
                             MouseArea {
                                 anchors.fill:    parent
@@ -202,9 +202,9 @@ Item {
 
                         // Next
                         Text {
-                            text:           "\uf051"
+                            text:           ">|"
                             color:          "#83a598"
-                            font.family:    "Font Awesome 6 Free"
+                            font.family:    "iosevka monospace"
                             font.pixelSize: 14
                             MouseArea {
                                 anchors.fill:    parent

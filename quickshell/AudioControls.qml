@@ -23,9 +23,9 @@ RowLayout {
             spacing: 4
 
             Text {
-                text: root.sysStats.volume < 1 ? "\uf026" : (root.sysStats.volume < 50 ? "\uf027" : "\uf028")
+                text: "vol"
                 color: "#fe8019"
-                font.family: "Font Awesome 6 Free"
+                font.family: "iosevka monospace"
                 font.pixelSize: 11
             }
             Text {
@@ -57,9 +57,9 @@ RowLayout {
             spacing: 4
 
             Text {
-                text: "\uf130"
+                text: "mic"
                 color: "#d3869b"
-                font.family: "Font Awesome 6 Free"
+                font.family: "iosevka monospace"
                 font.pixelSize: 11
             }
             Text {

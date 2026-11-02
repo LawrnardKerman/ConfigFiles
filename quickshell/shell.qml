@@ -27,9 +27,6 @@ ShellRoot {
 
         SystemStats { id: sysStats }
         NetworkStatus { id: netStatus }
-        //QuickSettingsStatus { id: qsStatus }
-        WeatherStatus { id: weatherStatus }
-        NotificationsStatus { id: notifStatus }
 
         Item {
             anchors.fill: parent
@@ -47,9 +44,9 @@ ShellRoot {
                     id: workspacesPill
                     height: parent.height
                     width: implicitWidth
-                    implicitWidth: workspacesContent.implicitWidth + Theme.pillPadding - (swayBorderWidth * 2)
-                    color: Theme.bg
-                    border.color: Theme.border
+                    implicitWidth: workspacesContent.implicitWidth + 12 - (swayBorderWidth * 2)
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
 
                     Workspaces {
@@ -63,9 +60,9 @@ ShellRoot {
                     id: miniPlayerPill
                     height: parent.height
                     width: implicitWidth
-                    implicitWidth: miniPlayerContent.implicitWidth + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
+                    implicitWidth: miniPlayerContent.implicitWidth + 12
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
                     visible: miniPlayerContent.player !== null
 
@@ -85,9 +82,9 @@ ShellRoot {
                 Rectangle {
                     id: titlePill
                     height: parent.height
-                    width: titleText.width + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
+                    width: titleText.width + 12
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
                     visible: (I3.focusedWindow && I3.focusedWindow.title && I3.focusedWindow.title.trim() !== "") ? true : false
 
@@ -95,9 +92,9 @@ ShellRoot {
                         id: titleText
                         anchors.centerIn: parent
                         text: I3.focusedWindow ? I3.focusedWindow.title : ""
-                        color: Theme.fg
-                        font.family: Theme.fontFamily
-                        font.pixelSize: Theme.fontSize
+                        color: "#ebdbb2"
+                        font.family: "iosevka, monospace"
+                        font.pixelSize: 11
                         elide: Text.ElideRight
                         width: Math.min(implicitWidth, 250)
                     }
@@ -117,9 +114,9 @@ ShellRoot {
                     id: audioPill
                     height: parent.height
                     width: implicitWidth
-                    implicitWidth: audioContent.implicitWidth + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
+                    implicitWidth: audioContent.implicitWidth + 12
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
 
                     AudioControls {
@@ -142,9 +139,9 @@ ShellRoot {
                 //    id: networkPill
                 //    height: parent.height
                 //    width: implicitWidth
-                //    implicitWidth: networkContent.implicitWidth + Theme.pillPadding
-                //    color: Theme.bg
-                //    border.color: Theme.border
+                //    implicitWidth: networkContent.implicitWidth + 12
+                //    color: "#282828"
+                //    border.color: "#3c3836"
                 //    border.width: swayBorderWidth
 
                 //    NetworkToggle {
@@ -155,73 +152,14 @@ ShellRoot {
                 //    }
                 //}
 
-                // ── Quick Settings pill ───────────────────────────────────
-                //Rectangle {
-                //    id: quickSettingsPill
-                //    height: parent.height
-                //    width: implicitWidth
-                //    implicitWidth: qsIcon.implicitWidth + Theme.pillPadding
-                //    color: Theme.bg
-                //    border.color: Theme.border
-                //    border.width: swayBorderWidth
-
-                //    Text {
-                //        id: qsIcon
-                //        anchors.centerIn: parent
-                //        text: "\uf013"
-                //        color: (qsStatus.dndEnabled || !qsStatus.wifiEnabled) ? "#fe8019" : "#ebdbb2"
-                //        font.family: "Font Awesome 6 Free"
-                //        font.pixelSize: 12
-                //    }
-
-                //    MouseArea {
-                //        anchors.fill: parent
-                //        cursorShape: Qt.PointingHandCursor
-                //        onClicked: qsWidget.open = !qsWidget.open
-                //    }
-                //}
-
-                // ── Weather pill ──────────────────────────────────────────
-                Rectangle {
-                    id: weatherPill
-                    height: parent.height
-                    width: implicitWidth
-                    implicitWidth: weatherRow.implicitWidth + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
-                    border.width: swayBorderWidth
-                    visible: weatherStatus.loaded
-
-                    Row {
-                        id: weatherRow
-                        anchors.centerIn: parent
-                        spacing: 4
-
-                        Text {
-                            text: weatherStatus.weatherIcon(weatherStatus.currentCode)
-                            color: weatherStatus.weatherColor(weatherStatus.currentCode)
-                            font.family: Theme.iconFontFamily
-                            font.pixelSize: Theme.iconFontSize
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                        Text {
-                            text: Math.round(weatherStatus.currentTemp) + "°F"
-                            color: Theme.fg
-                            font.family: Theme.fontFamily
-                            font.pixelSize: Theme.fontSize
-                            anchors.verticalCenter: parent.verticalCenter
-                        }
-                    }
-                }
-
                 // ── Stats pill ──────────────────────────────────────────
                 Rectangle {
                     id: statsPill
                     height: parent.height
                     width: implicitWidth
-                    implicitWidth: statsContent.implicitWidth + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
+                    implicitWidth: statsContent.implicitWidth + 12
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
 
                     BarStats {
@@ -236,17 +174,17 @@ ShellRoot {
                     id: clockPill
                     height: parent.height
                     width: implicitWidth
-                    implicitWidth: clockText.implicitWidth + Theme.pillPadding
-                    color: Theme.bg
-                    border.color: Theme.border
+                    implicitWidth: clockText.implicitWidth + 12
+                    color: "#282828"
+                    border.color: "#3c3836"
                     border.width: swayBorderWidth
 
                     Text {
                         id: clockText
                         anchors.centerIn: parent
-                        color: Theme.aqua
-                        font.family: Theme.fontFamily
-                        font.pixelSize: Theme.fontSize
+                        color: "#8ec07c"
+                        font.family: "iosevka, monospace"
+                        font.pixelSize: 11
 
                         Timer {
                             interval: 1000; running: true; repeat: true
@@ -258,24 +196,11 @@ ShellRoot {
                     MouseArea {
                         anchors.fill: parent
                         cursorShape: Qt.PointingHandCursor
-                        onClicked: {
-                            var target = !calWidget.open
-                            calWidget.open = target
-                            notifWidget.open = target
-                            wxWidget.open = target
-                        }
+                        onClicked: calWidget.open = !calWidget.open
                     }
                 }
             }
         }
-    }
-
-    // Blurred lock screen — trigger with `qs ipc call lock lock`
-    LockScreen { id: lockScreen }
-
-    IpcHandler {
-        target: "lock"
-        function lock() { lockScreen.lock() }
     }
 
     // ─── Volume Popup ─────────────────────────────────────────────────────────
@@ -295,21 +220,21 @@ ShellRoot {
 
         Rectangle {
             anchors.fill: parent
-            color: Theme.bg
-            border.color: Theme.borderLight
-            border.width: Theme.popupBorderWidth
+            color: "#282828"
+            border.color: "#504945"
+            border.width: 3
 
             ColumnLayout {
                 anchors.fill: parent
-                anchors.margins: Theme.popupMargin
-                spacing: Theme.popupSpacing
+                anchors.margins: 8
+                spacing: 6
 
                 Text {
                     Layout.alignment: Qt.AlignHCenter
                     text: Math.round(volSliderCustom.value) + "%"
-                    color: Theme.orange
+                    color: "#fe8019"
                     font.family: "iosevka, monospace"
-font.pixelSize: 10
+                    font.pixelSize: 10
                     font.bold: true
                 }
 
@@ -317,7 +242,7 @@ font.pixelSize: 10
                     id: volSliderCustom
                     Layout.fillHeight: true
                     Layout.alignment: Qt.AlignHCenter
-                    fillColor: Theme.orange
+                    fillColor: "#fe8019"
 
                     Connections {
                         target: sysStats
@@ -337,14 +262,6 @@ font.pixelSize: 10
                         setVolProc.running = false
                         setVolProc.running = true
                     }
-                }
-
-                Text {
-                    Layout.alignment: Qt.AlignHCenter
-                    text: "\uf028"
-                    color: Theme.orange
-                    font.family: "Font Awesome 6 Free"
-                    font.pixelSize: 12
                 }
             }
         }
@@ -367,21 +284,21 @@ font.pixelSize: 10
 
         Rectangle {
             anchors.fill: parent
-            color: Theme.bg
-            border.color: Theme.borderLight
-            border.width: Theme.popupBorderWidth
+            color: "#282828"
+            border.color: "#504945"
+            border.width: 3
 
             ColumnLayout {
                 anchors.fill: parent
-                anchors.margins: Theme.popupMargin
-                spacing: Theme.popupSpacing
+                anchors.margins: 8
+                spacing: 6
 
                 Text {
                     Layout.alignment: Qt.AlignHCenter
                     text: Math.round(micSliderCustom.value) + "%"
-                    color: Theme.purple
+                    color: "#d3869b"
                     font.family: "iosevka, monospace"
-font.pixelSize: 10
+                    font.pixelSize: 10
                     font.bold: true
                 }
 
@@ -389,7 +306,7 @@ font.pixelSize: 10
                     id: micSliderCustom
                     Layout.fillHeight: true
                     Layout.alignment: Qt.AlignHCenter
-                    fillColor: Theme.purple
+                    fillColor: "#d3869b"
 
                     Connections {
                         target: sysStats
@@ -410,45 +327,11 @@ font.pixelSize: 10
                         setMicProc.running = true
                     }
                 }
-
-                Text {
-                    Layout.alignment: Qt.AlignHCenter
-                    text: "\uf130"
-                    color: Theme.purple
-                    font.family: "Font Awesome 6 Free"
-                    font.pixelSize: 12
-                }
             }
         }
     }
 
-    // ─── Clock stack: calendar → notifications → weather ────────────────────
-    // Separate popups, all toggled by the clock pill, stacked vertically.
-    CalendarPopup {
-        id: calWidget
-        anchorWindow: bar
-        anchorPill:   clockPill
-        anchorY:      bar.implicitHeight + 2
-        screenWidth:  bar.screen ? bar.screen.width : 1920
-    }
-
-    NotificationsPopup {
-        id: notifWidget
-        anchorWindow: bar
-        anchorPill:   clockPill
-        anchorY:      calWidget.anchorY + calWidget.popupHeight + 6
-        screenWidth:  bar.screen ? bar.screen.width : 1920
-        notifStatus:  notifStatus
-    }
-
-    WeatherPopup {
-        id: wxWidget
-        anchorWindow:   bar
-        anchorPill:     clockPill
-        anchorY:        notifWidget.anchorY + notifWidget.popupHeight + 6
-        screenWidth:    bar.screen ? bar.screen.width : 1920
-        weatherStatus:  weatherStatus
-    }
+    // ─── Calendar Popup ──────────────────────────────────────────────────────-
 
     PlayerPopup {
         id: playerWidget
@@ -467,15 +350,5 @@ font.pixelSize: 10
         netStatus:    netStatus
     }
 
-    //QuickSettingsPopup {
-    //  
-    //    id: qsWidget
-    //    anchorWindow:   bar
-    //    anchorPill:     quickSettingsPill
-    //    anchorY:        bar.implicitHeight + 2
-    //    screenWidth:    bar.screen ? bar.screen.width : 1920
-    //    qsStatus:       qsStatus
-    //    notifStatus:    notifStatus
-    //}
 
 }
