@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import QtMultmedia
 
 RowLayout {
     id: root
@@ -23,7 +24,7 @@ RowLayout {
             spacing: 4
 
             Text {
-                text: "vol"
+                text: root.sysStats.volume < 1 ? "mut" : "vol"
                 color: "#fe8019"
                 font.family: "iosevka monospace"
                 font.pixelSize: 11
