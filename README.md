@@ -1,11 +1,12 @@
 <table width="100%">
   <tr>
-    <td width="50%"><img src="images/swappy-20261031_212432.png" width="100%"/></td>
-    <td width="50%"><img src="images/swappy-20261031_212442.png" width="100%"/></td>
+    <td width="50%"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42ba182a-fe2f-45b5-bc59-3becaf945ce5" /></td>
+    <td width="50%"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ca3c6322-f71a-4f85-a5d0-dfc4e56a3bc6" /></td>
   </tr>
   <tr>
-    <td width="50%"><img src="images/swappy-20261031_212916.png" width="100%"/></td>
-    <td width="50%"><img src="images/swappy-20261031_213241.png" width="100%"/></td>
+    <td width="50%"><img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c9b1f245-4be0-42f0-adda-460a58f89066" /></td>
+    <td width="50%"><img height="1080" alt="image" src="https://github.com/user-attachments/assets/30a67a50-c902-4e2b-9cfe-a96eb9232e26" /></td>
+
   </tr>
 </table>
 
