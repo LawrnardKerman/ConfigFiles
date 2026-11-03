@@ -49,6 +49,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+f fullscreen
 
 include /etc/sway/config.d/*
+exec fcitx5
 exec quickshell
 default_border pixel 2
 default_floating_border pixel 1

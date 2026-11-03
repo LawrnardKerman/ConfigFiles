@@ -15,7 +15,7 @@ This repo will have some oddities left over from when this was hosted on github 
 ## Installing 
 For whatever reason you may want to intall these do,
 ```bash
-sudo pacman -S --needed sway kitty mako rofi fish neovim git pipewire wireplumber pipewire-pulse grim slurp swappy starship fzf networkmanager polkit playerctl swaylock
+sudo pacman -S --needed sway kitty mako rofi fish neovim git pipewire wireplumber pipewire-pulse grim slurp swappy starship fzf networkmanager polkit playerctl swaylock fcitx5 fcitx5-chinese-addons
 git clone https://github.com/LawrnardKerman/ConfigFiles
 cd ConfigFiles
 chmod +x install.sh
