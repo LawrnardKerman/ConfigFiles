@@ -63,7 +63,7 @@ gaps outer 2
 
 ## QOL
 
-bindsym $mod+Escape exec swaylock -e --inside-color 3c3836 --color 282828 --indicator-radius 30 --indicator-idle-visible --key-hl-color  b8bb26 --layout-border-color ebdbb2 --inside-ver-color 458588 --inside-wrong-color cc241d --ring-color ebdbb2 --ring-ver-color 83a598 --text-ver-color ebdbb2 --text-wrong-color ebdbb2 --indicator-thickness 7 --layout-border-color 282828 -n -L
+bindsym $mod+Escape exec swaylock -e --inside-color 3c3836 --color 282828 --indicator-radius 30 --indicator-idle-visible --key-hl-color  b8bb26 --layout-border-color ebdbb2 --inside-ver-color 458588 --inside-wrong-color cc241d --ring-color ebdbb2 --ring-ver-color 83a598 --text-ver-color 258588 --text-wrong-color cc241d --indicator-thickness 7 --layout-border-color 282828 -n -L
 exec_always sleep 2 && kitty --class scratchpad_note -e nvim ~/notes.md ## Notepad
 for_window [app_id="scratchpad_note"] move scratchpad
 bindsym $mod+minus scratchpad show
