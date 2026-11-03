@@ -15,11 +15,15 @@ This repo will have some oddities left over from when this was hosted on github 
 ## Installing 
 For whatever reason you may want to intall these do,
 ```bash
-git clone https://github.com/LawrnardKerman/ConfigFiles /tmp/ConfigFiles
-cd /tmp/ConfigFiles
-sudo pacman -S --needed git sway kitty mako neovim fish starship exa bat rofi grim slurp swappy
-yay -S --needed --noconfirm quickshell-git
-./install.sh 
+sudo pacman -S --needed sway kitty mako rofi fish neovim git pipewire wireplumber pipewire-pulse grim slurp swappy starship fzf networkmanager polkit playerctl
+git clone https://github.com/LawrnardKerman/ConfigFiles
+cd ConfigFiles
+chmod +x install.sh
+./install.sh
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ../
 ```
 then 
 ```bash
