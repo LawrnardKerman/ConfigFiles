@@ -102,10 +102,10 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         visible:          albumArt.status !== Image.Ready
-                        text:             "loading..."
+                        text:             "__ \n b b"
                         color:            "#504945"
                         font.family:      "iosevka monospace"
-                        font.pixelSize:   10
+                        font.pixelSize:   16
                     }
                 }
 
