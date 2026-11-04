@@ -347,6 +347,14 @@ ShellRoot {
         screenWidth:  bar.screen ? bar.screen.width : 1920
         notifStatus:  notifStatus
     }
+    WeatherPopup {
+        id: wxWidget
+        anchorWindow:   bar
+        anchorPill:     clockPill
+        anchorY:        notifWidget.anchorY + notifWidget.popupHeight + 6
+        screenWidth:    bar.screen ? bar.screen.width : 1920
+        weatherStatus:  weatherStatus
+    }
 
     PlayerPopup {
         id: playerWidget
