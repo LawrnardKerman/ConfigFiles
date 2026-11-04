@@ -332,6 +332,21 @@ ShellRoot {
     }
 
     // ─── Calendar Popup ──────────────────────────────────────────────────────-
+    CalendarPopup {
+        id: calWidget
+        anchorWindow: bar
+        anchorPill:   clockPill
+        anchorY:      bar.implicitHeight + 2
+        screenWidth:  bar.screen ? bar.screen.width : 1920
+    }
+    NotificationsPopup {
+        id: notifWidget
+        anchorWindow: bar
+        anchorPill:   clockPill
+        anchorY:      calWidget.anchorY + calWidget.popupHeight + 6
+        screenWidth:  bar.screen ? bar.screen.width : 1920
+        notifStatus:  notifStatus
+    }
 
     PlayerPopup {
         id: playerWidget
@@ -339,15 +354,6 @@ ShellRoot {
         anchorPill:   miniPlayerPill
         anchorY:      bar.implicitHeight + 2
         screenWidth:  bar.screen ? bar.screen.width : 1920
-    }
-
-    NetworkPopup {
-        id: netPopup
-        anchorWindow: bar
-        anchorPill:   networkPill
-        anchorY:      bar.implicitHeight + 2
-        screenWidth:  bar.screen ? bar.screen.width : 1920
-        netStatus:    netStatus
     }
 
 
