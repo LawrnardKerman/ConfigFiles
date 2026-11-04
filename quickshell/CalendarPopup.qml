@@ -306,7 +306,7 @@ Item {
                         Layout.fillWidth: true
                         Text {
                             text: "<"; color: "#a89984"
-                            font.family: "iosevka monospace"; font.pixelSize: 10
+                            font.family: "iosevka monospace"; font.pixelSize: 15
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {
@@ -324,7 +324,7 @@ Item {
                         Item { Layout.fillWidth: true }
                         Text {
                             text: ">"; color: "#a89984"
-                            font.family: "iosevka monospace"; font.pixelSize: 10
+                            font.family: "iosevka monospace"; font.pixelSize: 15
                             MouseArea {
                                 anchors.fill: parent; anchors.margins: -4; cursorShape: Qt.PointingHandCursor
                                 onClicked: {
