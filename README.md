@@ -11,12 +11,12 @@
 </table>
 
 # ~~Corvid's~~Lawnard's Config
-This repo will have some oddities left over from when this was hosted on github being my first repo. These are my configs for sway and other applications. These are probably very opioniated as these have been a product of my personal expieriences with arch linux. I may switch to DWM in the future. Everything is themed after Gruvbox Dark Soft.
+This repo is *my* personal config files based off @TGYT-Dev 's files. Everything is themed after Gruvbox Dark Soft.
 
 ## Installing 
 For whatever reason you may want to intall these do,
 ```bash
-sudo pacman -S --needed sway kitty mako rofi fish neovim git pipewire wireplumber pipewire-pulse grim slurp swappy starship fzf networkmanager polkit playerctl swaylock fcitx5 fcitx5-chinese-addons
+sudo pacman -S --needed sway kitty mako rofi fish neovim git pipewire wireplumber pipewire-pulse grim slurp swappy starship fzf networkmanager polkit playerctl swaylock fcitx5 cava
 git clone https://github.com/LawrnardKerman/ConfigFiles
 cd ConfigFiles
 chmod +x install.sh
