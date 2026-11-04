@@ -39,6 +39,9 @@ sudo reboot
 > cd yay
 > makepkg -si
 > ```
+>
+>I'm too lazy to set up the config files for fcitx but this repo is pretty good https://github.com/ayamir/fcitx5-gruvbox
+>
 
 ## Keybinds
 
