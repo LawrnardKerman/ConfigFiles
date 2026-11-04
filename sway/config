@@ -58,7 +58,7 @@ bindsym Alt+Shift+s exec grim -g "$(slurp)" /tmp/swappy.png && swappy -f /tmp/sw
 ## Appearance
 
 include ~/.config/sway/appearance
-output * bg ~/bg.* fill
+output * bg ~/bg.png fill
 #gaps inner 0
 gaps outer 2
 
