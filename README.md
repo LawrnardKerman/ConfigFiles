@@ -59,6 +59,5 @@ sudo reboot
 | Mod + Shift + H / J / K / L | Move window left / down / up / right |
 | Mod + # | Switch to workspace # |
 | Mod + Shift + # | Move window to workspace # |
-| Mod + Minus | Toggle notes |
 | Mod + Escape | Lock screen |
 | Alt + Shift + S | Screenshot region |
