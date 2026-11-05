@@ -23,10 +23,10 @@ QtObject {
 
     // ── Metrics ─────────────────────────────────────────────────────────
     readonly property int barHeight: 24
-    readonly property int pillPadding: 12           // horizontal padding in pills
-    readonly property int pillBorderWidth: 3
-    readonly property int popupBorderWidth: 3
-    readonly property int popupMargin: 8            // ColumnLayout margins in popups
+    readonly property int pillPadding: 6           // horizontal padding in pills
+    readonly property int pillBorderWidth: 2
+    readonly property int popupBorderWidth: 2
+    readonly property int popupMargin: 4            // ColumnLayout margins in popups
     readonly property int popupSpacing: 6
 
     // ── Fonts ───────────────────────────────────────────────────────────
