@@ -7,7 +7,7 @@ if status is-interactive
 
     # Astetichs (change this to something better later)
 
-    #zfetch
+    zfetch
     starship init fish | source
 
     source ~/.config/fish/fzfTheme.fish
