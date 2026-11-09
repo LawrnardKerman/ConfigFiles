@@ -3,7 +3,6 @@ if status is-interactive
     # Variables 
 
     set gitRepoDir "$HOME/ConfigFiles/"
-    set mcServerDir "$HOME/servers/mcServers/"
 
     # Astetichs (change this to something better later)
 
