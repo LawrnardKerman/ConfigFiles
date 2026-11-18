@@ -105,3 +105,7 @@ if status is-interactive
 end
 # Added by Antigravity CLI installer
 set -gx PATH "/home/dev/.local/bin" $PATH
+
+# terminal-wakatime setup
+set -gx PATH "$HOME/.wakatime" $PATH
+terminal-wakatime init fish | source

@@ -4,6 +4,8 @@ import Quickshell
 import Quickshell.I3
 import Quickshell.Services.Mpris
 import Quickshell.Io
+import Quickshell.Services.UPower
+
 
 ShellRoot {
     id: root
@@ -108,6 +110,38 @@ ShellRoot {
                 anchors.top: parent.top
                 anchors.bottom: parent.bottom
                 spacing: swayGapsInner
+                
+                //batteryy pill-------
+                Rectangle{
+                    id: batteryPill
+                    height: parent.height
+                    width: 75
+                    color: "#282828"
+                    border.color: "#3c3836"
+                    border.width: swayBorderWidth
+                    Text{
+                      id: batteryText
+                      anchors.centerIn: parent
+                      color: "#ebdbb2"
+                      font.family: "iosevka, monospace"
+                      font.pixelSize: 11
+                      Timer{
+                        interval: 60000; running: true; repeat: true
+                        onTriggered: batteryText.text=(!UPower.onBattery?"batt^: ":"batt: ")+UPower.displayDevice.percentage*100+"%"
+
+                      }
+                      Component.onCompleted: text=(!UPower.onBattery?"batt^: ":"batt: ")+UPower.displayDevice.percentage*100+"%"
+
+
+
+                      
+
+                    }
+
+                }
+
+
+
 
                 // ── Audio Controls pill ──────────────────────────────────
                 Rectangle {
@@ -201,7 +235,7 @@ ShellRoot {
                 }
             }
         }
-    }
+    
 
     // ─── Volume Popup ─────────────────────────────────────────────────────────
     PopupWindow {
@@ -364,5 +398,5 @@ ShellRoot {
         screenWidth:  bar.screen ? bar.screen.width : 1920
     }
 
-
+  }
 }
